@@ -1,0 +1,54 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #222938;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.search{
+    width: 100%;
+    background-color: #343A48;
+    height: 120px;
+}
+
+.cont{
+    width: 100%;
+    max-width: 940px;
+    margin: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.glass{
+    font-size: 56px;
+}
+
+.awesomplete{
+    width: calc(100% - 65px);
+}
+
+#user-input{
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+    font-size: 56px;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+}
+
+#user-input::placeholder{
+    color: #5C616C;
+}
+
+h1{
+    color: #A06D52;
+    font-size: 32px;
+    font-weight: 600;
+}
