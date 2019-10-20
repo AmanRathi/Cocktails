@@ -11,7 +11,7 @@ body{
 
 .search{
     width: 100%;
-    background-color: #343A48;
+    background-color: #2B3140;
     height: 120px;
 }
 
@@ -51,4 +51,80 @@ h1{
     color: #A06D52;
     font-size: 32px;
     font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.dtype{
+    height: 70px;
+}
+
+.dtype > span{
+    padding: 6px 10px 6px 10px;
+    background: linear-gradient(90deg, #9F6140 0%, #DB926B 100%);
+    color: #FFFFFF;
+    font-size: 12px;
+    border-radius: 2px;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.title-image-cont{
+    width: 172px;
+    height: 172px;
+    background-color: #2B3140;
+    border-radius: 6px;
+    padding: 9px;
+    margin-bottom: 32px;
+}
+
+.title-image-cont img{
+    width: 154px;
+    border-radius: 4px;
+}
+
+.ing-cont{
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px 0px 32px 0px;
+}
+
+.ing-image-cont{
+    width: 120px;
+    height: 120px;
+    background-color: #2B3140;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.ing-image-cont img{
+    widows: 100px;
+    height: 100px;
+}
+
+.ing-name{
+    width: 120px;
+    text-align: center;
+    color: #929292;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 10px;
+}
+
+.inst-cont{
+    margin: 0px 0px 32px 0px;
+    padding-left: 20px;
+    list-style-image: url('images/bullet.svg');
+    color: #895B42;
+    font-size: 18px;
+}
+
+.inst-cont li{
+    margin-bottom: 20px;
+}
+
+footer{
+    height: 160px;
+    padding-top: 40px;
 }
