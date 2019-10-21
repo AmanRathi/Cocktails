@@ -55,11 +55,11 @@ h1{
     margin-bottom: 10px;
 }
 
-.dtype{
+.dtype-cont{
     height: 70px;
 }
 
-.dtype > span{
+.dtype-cont > span{
     padding: 6px 10px 6px 10px;
     background: linear-gradient(90deg, #9F6140 0%, #DB926B 100%);
     color: #FFFFFF;
@@ -90,6 +90,10 @@ h1{
     margin: 0px 0px 32px 0px;
 }
 
+.ing-cont li{
+    margin-right: 10px;
+}
+
 .ing-image-cont{
     width: 120px;
     height: 120px;
@@ -112,15 +116,16 @@ h1{
     margin-top: 10px;
 }
 
-.inst-cont{
+.dir-cont{
     margin: 0px 0px 32px 0px;
     padding-left: 20px;
     list-style-image: url('images/bullet.svg');
-    color: #895B42;
-    font-size: 18px;
+    color: #929292;
+    font-size: 16px;
+    letter-spacing: .2px;
 }
 
-.inst-cont li{
+.dir-cont li{
     margin-bottom: 20px;
 }
 

@@ -6,6 +6,12 @@ let url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 let newAwesomplete = new Awesomplete(userInput, {autoFirst: true});
 let cNames = null;
 let cID = null;
+// Content variables
+let dType = document.getElementById('dtype')
+let dName = document.getElementById('dname')
+let titleImage = document.getElementById('title-image')
+let ings = document.getElementById('ings')
+let dirList = document.getElementById('dirs-list')
 
 let cocktail = {
     id: "",
@@ -55,7 +61,7 @@ userInput.addEventListener('awesomplete-select', obj => {
     for(let i=0; i<res.drinks.length; i++){
         if(res.drinks[i].strDrink == obj.text){
             //console.log(res.drinks[i]);
-            temp = res.drinks[i]
+            let temp = res.drinks[i]
             cocktail.id = temp.idDrink
             cocktail.name = temp.strDrink
             cocktail.alcoholic = temp.strAlcoholic
@@ -67,14 +73,30 @@ userInput.addEventListener('awesomplete-select', obj => {
                 }
                 cocktail.ingridients.name[i-1] = temp['strIngredient' + i]
                 cocktail.ingridients.pics[i-1] = 'https://www.thecocktaildb.com/images/ingredients/' + temp['strIngredient' + i] + '-Medium.png'
-                cocktail.ingridients.qty[i-1] = temp['strMeasure' + i]
+                cocktail.ingridients.qty[i-1] = (temp['strMeasure' + i] != null) ? temp['strMeasure' + i] : ""
             }
-            console.log(cocktail);
-            
+            //console.log(cocktail);
             //main.innerHTML = JSON.stringify(cocktail, null, 2)
             break;
         }
     }
+    //plotting to page
+    dType.innerHTML = cocktail.alcoholic
+    dName.innerHTML = cocktail.name
+    titleImage.src = cocktail.pic
+    let temp = ""
+    for(let i = 0; i<cocktail.ingridients.pics.length; i++){
+        temp += '<li>' +
+                '<div class="ing-image-cont"><img src="' + cocktail.ingridients.pics[i] + '" alt="Ingridient"></div>' +
+                '<div class="ing-name">' + cocktail.ingridients.qty[i] + " " + cocktail.ingridients.name[i] + '</div>' +
+                '</li>'
+    }
+    ings.innerHTML = temp;
+    temp = ""
+    for(let i=0; i<cocktail.directions.length - 1; i++){
+        temp += '<li>' + cocktail.directions[i] + '</li>'
+    }
+    dirList.innerHTML = temp
 })
 
 
