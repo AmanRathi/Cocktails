@@ -85,13 +85,15 @@ h1{
 
 .ing-cont{
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0px;
-    margin: 0px 0px 32px 0px;
+    margin: 0px 0px 12px 0px;
 }
 
 .ing-cont li{
     margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 .ing-image-cont{
@@ -137,4 +139,24 @@ footer{
 
 footer a{
     color: #FFFFFF;
+}
+
+
+@media only screen and (max-width: 767px){
+    .search{
+        height: 60px;
+    }
+    #user-input{
+        width: 100%;
+        height: 60px;
+        margin-top: 0px;
+        font-size: 26px;
+        font-weight: 600;
+    }
+    .glass{
+        font-size: 26px;
+    }
+    .awesomplete {
+        width: calc(100% - 36px);
+    }
 }
