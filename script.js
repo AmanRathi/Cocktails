@@ -13,6 +13,10 @@ let titleImage = document.getElementById('title-image')
 let ings = document.getElementById('ings')
 let dirList = document.getElementById('dirs-list')
 
+window.onload = function() {
+    userInput.focus();
+  }
+
 let cocktail = {
     id: "",
     name: "",
