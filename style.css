@@ -45,6 +45,7 @@ body{
 
 #user-input::placeholder{
     color: #5C616C;
+    font-family: 'Poppins';
 }
 
 h1{
