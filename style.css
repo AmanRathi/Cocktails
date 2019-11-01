@@ -158,6 +158,6 @@ footer a{
         font-size: 26px;
     }
     .awesomplete {
-        width: calc(100% - 36px);
+        width: calc(100% - 40px);
     }
 }
