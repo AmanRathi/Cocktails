@@ -71,7 +71,7 @@ userInput.addEventListener('awesomplete-select', obj => {
             cocktail.alcoholic = temp.strAlcoholic
             cocktail.pic = temp.strDrinkThumb
             cocktail.directions = temp.strInstructions.split('.')
-            for(let i = 1; 1<=15; i++){
+            for(let i = 1; i<=15; i++){
                 if(temp['strIngredient' + i] == null){
                     break;
                 }
@@ -101,6 +101,18 @@ userInput.addEventListener('awesomplete-select', obj => {
         temp += '<li>' + cocktail.directions[i] + '</li>'
     }
     dirList.innerHTML = temp
+    cocktail = {
+        id: "",
+        name: "",
+        alcoholic: "",
+        pic: "",
+        ingridients: {
+            pics: [],
+            name: [],
+            qty: []
+        },
+        directions: []
+    }
 })
 
 
